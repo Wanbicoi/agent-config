@@ -33,8 +33,7 @@ extensions/skills/commands/subagents, themes, MCP server definitions.
 
 ## Wiring
 
-This repo is a git submodule of
-[`nixconfig`](https://github.com/CHANGE_ME/nixconfig) and is linked into place by
+This repo is a git submodule of `nixconfig` and is linked into place by
 `home/nixos/default.nix` using `mkOutOfStoreSymlink` (so the link target is a
 writable checkout, **not** `/nix/store` — important for Claude Code's settings
 watcher). The same pattern as the `nvim` submodule.
@@ -49,6 +48,18 @@ home.file.".claude/agents"   -> <repo>/claude/agents
 
 > The absolute path `${HOME}/nixconfig` is assumed, matching the existing `nvim`
 > wiring. Clone `nixconfig` at `~/nixconfig`.
+
+## Remote
+
+The submodule URL is currently a placeholder. Point it at your real remote
+(private repo recommended, it contains personal agent config):
+
+```sh
+cd ~/nixconfig
+make agent-remote AGENT_REMOTE=git@github.com:<you>/agent-config.git
+git add .gitmodules agent-config && git commit -m "agent-config: set remote"
+cd agent-config && git push -u origin main
+```
 
 ## New machine
 
