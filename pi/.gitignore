@@ -3,6 +3,7 @@ auth.json
 
 # --- Runtime / machine-local state ---
 models-store.json
+trust.json
 sessions/
 npm/
 pi-subagents/
