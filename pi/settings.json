@@ -1,0 +1,13 @@
+{
+  "$schema": "https://pi.dev/schemas/settings.schema.json",
+  "defaultProvider": "opencode-go",
+  "defaultModel": "deepseek-v4.1-flash",
+  "hideThinkingBlock": true,
+  "modelThinkingLevels": {
+    "opencode-go/deepseek-v4.1-flash": "low"
+  },
+  "packages": [
+    "npm:pi-web-access",
+    "npm:pi-subagents"
+  ]
+}

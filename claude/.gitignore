@@ -1,0 +1,18 @@
+# --- Credentials (never commit) ---
+.credentials.json
+credentials.json
+
+# --- Platform-managed settings ---
+# Orca rewrites ~/.claude/settings.json with per-machine hook commands.
+# Do not version it. See README.md.
+settings.json
+settings.local.json
+
+# --- Runtime / machine-local state ---
+projects/
+todos/
+shell-snapshots/
+statsig/
+plugins/
+logs/
+*.local.json

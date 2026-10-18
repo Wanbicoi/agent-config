@@ -1,0 +1,9 @@
+# --- Credentials (never commit) ---
+auth.json
+
+# --- Runtime / machine-local state ---
+storage/
+log/
+logs/
+node_modules/
+*.log

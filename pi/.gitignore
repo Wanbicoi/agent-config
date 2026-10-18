@@ -1,0 +1,14 @@
+# --- Credentials (never commit) ---
+auth.json
+
+# --- Runtime / machine-local state ---
+models-store.json
+sessions/
+npm/
+pi-subagents/
+cache/
+logs/
+*.log
+
+# --- Platform-managed (re-injected by Orca, must not be versioned) ---
+extensions/orca-agent-status.ts
