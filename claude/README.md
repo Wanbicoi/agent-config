@@ -7,10 +7,16 @@ configuration. It is symlinked into `~/.claude/` by `home/nixos/default.nix`.
 
 | Path        | Purpose                                   |
 |-------------|-------------------------------------------|
-| `CLAUDE.md` | Global user instructions                  |
+| `CLAUDE.md` | Symlink to `../AGENTS.md` (global instructions) |
 | `agents/`   | User subagents (`*.md`)                   |
 | `commands/` | User slash commands (`*.md`)              |
-| `skills/`   | User skills (`<name>/SKILL.md`)           |
+
+Global instructions live in the repo-root `AGENTS.md`, shared with Pi and
+OpenCode. `CLAUDE.md` is only a symlink to it; edit `AGENTS.md` instead.
+
+Agent Skills are shared too: they live in the repo-root `skills/` directory and
+are linked into Claude Code via `~/.claude/skills` (see
+`home/nixos/submodules.nix`).
 
 ## Deliberately NOT tracked
 

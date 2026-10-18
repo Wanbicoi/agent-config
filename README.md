@@ -16,10 +16,26 @@ see each subdirectory's `.gitignore`.
 ## Layout
 
 ```
-pi/        Pi agent dir        -> ~/.pi/agent
-claude/    user config subset  -> ~/.claude/{CLAUDE.md,agents,commands,skills}
-opencode/  OpenCode config dir -> ~/.config/opencode
+AGENTS.md  canonical global instructions (single source of truth)
+skills/    canonical Agent Skills, shared by every agent
+pi/        Pi agent dir        -> ~/.pi/agent          (AGENTS.md -> ../AGENTS.md)
+claude/    user config subset  -> ~/.claude/{CLAUDE.md,agents,commands}
+opencode/  OpenCode config dir -> ~/.config/opencode     (AGENTS.md -> ../AGENTS.md)
 ```
+
+`AGENTS.md` at the repo root is the only place global instructions are edited.
+The per-tool files are symlinks to it, so Pi, Claude Code, and OpenCode all load
+the same text:
+
+| Tool | File read |
+|------|-----------|
+| Pi | `pi/AGENTS.md` -> `../AGENTS.md` |
+| OpenCode | `opencode/AGENTS.md` -> `../AGENTS.md` |
+| Claude Code | `claude/CLAUDE.md` -> `../AGENTS.md` (wired directly to the canonical file) |
+
+`skills/` is likewise the single canonical copy of installed Agent Skills. Pi
+and OpenCode read it through `~/.agents/skills`, Claude Code through
+`~/.claude/skills`; the wiring lives in `home/nixos/submodules.nix`.
 
 ## Tracked vs ignored
 
@@ -41,7 +57,9 @@ watcher). The same pattern as the `nvim` submodule.
 ```
 home.file.".pi/agent"        -> <repo>/pi
 xdg.configFile."opencode"    -> <repo>/opencode
-home.file.".claude/CLAUDE.md"-> <repo>/claude/CLAUDE.md
+home.file.".agents/skills"   -> <repo>/skills
+home.file.".claude/skills"   -> <repo>/skills
+home.file.".claude/CLAUDE.md"-> <repo>/AGENTS.md
 home.file.".claude/agents"   -> <repo>/claude/agents
 ...
 ```
