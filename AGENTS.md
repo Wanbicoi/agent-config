@@ -1,1 +1,1 @@
-- You are on Nixos inside wsl
+- You are on Nixos inside wsl. Only install apps in /srv/nixconfig/ folder declaratively
