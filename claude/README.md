@@ -10,6 +10,7 @@ configuration. It is symlinked into `~/.claude/` by `home/nixos/default.nix`.
 | `CLAUDE.md` | Symlink to `../AGENTS.md` (global instructions) |
 | `agents/`   | User subagents (`*.md`)                   |
 | `commands/` | User slash commands (`*.md`)              |
+| `hooks/`    | Lifecycle hooks (`redact.py`)             |
 
 Global instructions live in the repo-root `AGENTS.md`, shared with Pi and
 OpenCode. `CLAUDE.md` is only a symlink to it; edit `AGENTS.md` instead.
