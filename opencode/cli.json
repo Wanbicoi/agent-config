@@ -2,5 +2,19 @@
   "$schema": "https://opencode.ai/v2/cli.json",
   "theme": {
     "name": "orng"
-  }
+  },
+  "tabs": {
+    "mode": "auto",
+    "layout": "horizontal",
+    "indicators": "numbers"
+  },
+  "animations": false,
+  "session": {
+    "image_preview": false,
+    "markdown": "rendered"
+  },
+  "prompt": {
+    "image_preview": true
+  },
+  "plugins": ["./herdr-opencode"]
 }
