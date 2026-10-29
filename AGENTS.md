@@ -1,1 +1,2 @@
 - You are on Nixos inside wsl. Only install apps in /srv/nixconfig/ folder declaratively
+- URLs in responses: always output the full URL instead of mentioning it as a short title or link label
