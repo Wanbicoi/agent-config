@@ -2,10 +2,8 @@
 .credentials.json
 credentials.json
 
-# --- Platform-managed settings ---
-# Orca rewrites ~/.claude/settings.json with per-machine hook commands.
-# Do not version it. See README.md.
-settings.json
+# --- Machine-local settings overrides ---
+# settings.json itself is tracked; this is Claude Code's per-machine override.
 settings.local.json
 
 # --- Runtime / machine-local state ---

@@ -44,8 +44,8 @@ extensions/skills/commands/subagents, themes, MCP server definitions.
 
 **Never tracked:** `auth.json`, `.credentials.json`, API keys, `sessions/`,
 `projects/`, `storage/`, installed npm packages, and platform-managed files
-(e.g. Orca's `pi/extensions/orca-agent-status.ts` and Claude's
-`~/.claude/settings.json`).
+(e.g. Orca's `pi/extensions/orca-agent-status.ts` and Herdr's
+`~/.claude/hooks/herdr-agent-state.sh`).
 
 ## Wiring
 
@@ -61,6 +61,7 @@ home.file.".agents/skills"   -> <repo>/skills
 home.file.".claude/skills"   -> <repo>/skills
 home.file.".claude/CLAUDE.md"-> <repo>/AGENTS.md
 home.file.".claude/agents"   -> <repo>/claude/agents
+home.file.".claude/settings.json" -> <repo>/claude/settings.json
 ...
 ```
 
