@@ -16,5 +16,13 @@
   "prompt": {
     "image_preview": true
   },
-  "plugins": ["./herdr-opencode"]
+  "plugins": [
+    "./herdr-opencode"
+  ],
+  "diffs": {
+    "single": false,
+    "view": "auto",
+    "tree": true,
+    "wrap": "word"
+  }
 }
