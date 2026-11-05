@@ -1,4 +1,3 @@
 - You are on Nixos inside wsl. Only install apps in /srv/nixconfig/ folder declaratively
-- Links in responses: **ALWAYS** render as `[label](target)`:
-  - URLs: label is a short description of the page, e.g. `[Bun docs](https://bun.sh/docs)`.
-  - File positions: target is a `file://` URL ending in `:line[:col]`, absolute or relative to the current folder; label is a short description, e.g. `[the CLI entry point](file:///home/troy/repo/src/cli.ts:42:7)`.
+- ALWAYS render URLs as `[short description](URL)`
+- ALWAYS render the exact file path and line/column reference whenever mentioning or referencing to file or code position. Use `file://` URLs ending in `:line[:col]`, e.g. `[CLI entry point](file:///home/troy/repo/src/cli.ts:42:7)`
