@@ -1,17 +1,19 @@
 {
   "$schema": "https://opencode.ai/v2/cli.json",
   "theme": {
-    "name": "orng"
+    "name": "synthwave84",
+    "mode": "light"
   },
   "tabs": {
-    "mode": "auto",
+    "mode": "off",
     "layout": "horizontal",
     "indicators": "numbers"
   },
   "animations": false,
   "session": {
     "image_preview": false,
-    "markdown": "rendered"
+    "markdown": "rendered",
+    "verbosity": "low"
   },
   "prompt": {
     "image_preview": true
