@@ -15,6 +15,24 @@
       }
     ]
   },
+  "enableArtifact": false,
+  "enableWorkflows": false,
+  "feedbackDrafts": "off",
+  "permissions": {
+    "deny": [
+      "mcp__claude_ai_Claude_Docs",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "ReportFindings"
+    ]
+  },
+  "skillOverrides": {
+    "artifact-design": "off",
+    "artifact-diagramming": "off",
+    "artifact-capabilities": "off",
+    "dataviz": "off",
+    "plugin-authoring": "off"
+  },
   "enabledPlugins": {},
   "extraKnownMarketplaces": {},
   "skipDangerousModePermissionPrompt": true,
