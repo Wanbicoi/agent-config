@@ -1,3 +1,4 @@
 - You are on Nixos inside wsl. Only install apps in /srv/nixconfig/ folder declaratively
+- Whenever you stop and wait for the user for the next step, use built-in question tool.
 - ALWAYS render URLs as `[short description](URL)`
 - ALWAYS render the exact file path and line/column reference whenever mentioning or referencing to file or code position. Use `file://` URLs ending in `:line[:col]`, e.g. `[CLI entry point](file:///home/troy/repo/src/cli.ts:42:7)`
