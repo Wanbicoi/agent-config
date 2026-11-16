@@ -13,7 +13,8 @@
   "session": {
     "image_preview": false,
     "markdown": "rendered",
-    "verbosity": "low"
+    "verbosity": "low",
+    "sidebar": "hide"
   },
   "prompt": {
     "image_preview": true
@@ -21,6 +22,12 @@
   "plugins": [
     "./herdr-opencode"
   ],
+  "keybinds": {
+    "input.buffer.home": "home",
+    "input.buffer.end": "end",
+    "session.first": "ctrl+g,ctrl+home,alt+home",
+    "session.last": "ctrl+alt+g,ctrl+end"
+  },
   "diffs": {
     "single": false,
     "view": "auto",
